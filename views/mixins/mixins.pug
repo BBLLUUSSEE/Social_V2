@@ -45,7 +45,7 @@ mixin createPostModals(userLoggedIn)
     +createDeletePostModal()
 
 mixin createFollowButton(user, isFollowing)
-    - text = isFollowing ? "Follow" : "Following"
+    - text = isFollowing ? "Following" : "Follow"
     - buttonClass = isFollowing ? "followButton following" : "followButton"
     button(class=buttonClass, data-user=user._id) #{text}
 

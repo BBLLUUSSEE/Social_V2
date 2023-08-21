@@ -3,7 +3,7 @@
     --blueLight: #9BD1F9;
     --blueBackground: rgba(212, 237, 255, 0.6);
     --buttonHoverBg: #d4edff;
-    --lightGrey: rgba(0, 0, 0, 0.13);
+    --lightGrey: rgb(230, 236, 240);
     --spacing: 15px;
     --grayText: rgb(101, 119, 134);
     --greyButtonText: rgba(0, 0, 0, 0.34);
@@ -15,7 +15,6 @@
 
 * {
     outline: none !important;
-    max-width: 100%;
 }
 
 a { 
@@ -37,52 +36,34 @@ h1 {
 nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
 }
 
 nav a {
     display: flex;
-    font-size: 20px;
-    width: 200px;
-    height: 55px;
-    align-items: center;
-    justify-content: flex-start; 
-    color: #212529;
-    padding: 15px;
-}
-
-nav a.blue {
-    display: flex;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 30px;
     width: 55px;
     height: 55px;
-    align-items: flex-start;
-    justify-content: flex-start; 
+    align-items: center;
+    justify-content: center; 
     color: #212529;
-    padding: 15px;
-}
-
-nav span {
-    padding: var(--spacing);
-    font-weight: bold;
-    font-family: inherit;
 }
 
 nav a.blue {
     color: var(--blue);
+
 }
 
 nav a:hover {
     background-color: var(--buttonHoverBg);
     color: var(--blue);
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
-nav a.blue:hover {
-    background-color: var(--buttonHoverBg);
-    color: var(--blue);
-    border-radius: 50px;
+.wrapper > .row {
+    margin: 0;
 }
 
 button {
@@ -98,8 +79,8 @@ button span {
 
 .mainSectionContainer {
     padding: 0;
-    border-left: 2px solid var(--lightGrey);
-    border-right: 2px solid var(--lightGrey);
+    border-left: 1px solid var(--lightGrey);
+    border-right: 1px solid var(--lightGrey);
     display: flex;
     flex-direction: column;
 }
@@ -120,7 +101,7 @@ button span {
 .postFormContainer {
     display: flex;
     padding: var(--spacing);
-    border-bottom: 1px solid var(--lightGrey);
+    border-bottom: 10px solid rgb(230, 236, 240);
     flex-shrink: 0;
 }
 
@@ -210,7 +191,7 @@ button span {
 }
 
 .postFooter .postButtonContainer button{
-    padding: 2px 5px;
+    padding: 2 5px;
 }
 
 .header a {
@@ -302,7 +283,7 @@ button span {
     text-align: right;
     padding: var(--spacing);
     min-height: 66px;
-} 
+}
 
 .profileButton,
 .followButton {
@@ -373,67 +354,3 @@ button span {
     color: var(--blue);
     background-color: var(--blueBackground);
 }
-
-/* Stili per la searchbox */
-.searchbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* Aggiungi spazio superiore */
-}
-
-.searchbox input {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 50px;
-    border: none;
-    background-color: var(--lightGrey);
-    padding: 10px; /* Aggiungi del padding per migliorare l'aspetto */
-    outline: none; /* Rimuovi il bordo di evidenziazione */
-}
-
-.searchbox input:focus {
-    border: 1px solid var(--blue);
-    box-shadow: none;
-}
-
-/* Stili per la sezione dei risultati di ricerca */
-.searchResultsContainer {
-    margin-top: 20px;
-    background-color: var(--lightGrey);
-    border-radius: 20px;
-}
-
-.searchResultsContainer h2 {
-    font-size: 18px;
-    padding: var(--spacing);
-    font-family: inherit;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.searchResultsList {
-    list-style: none;
-    padding: 0;
-}
-
-.searchResultItem {
-    display: flex;
-    align-items: center;
-    padding: var(--spacing);
-}
-
-.searchResultItem img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.searchResultItem span {
-    text-align: center;
-    font-family: inherit;
-    font-weight: bold;
-}
-
-/* Aggiungi altri stili come colori, bordi, ecc. secondo il tuo design */

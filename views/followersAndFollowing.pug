@@ -1,0 +1,14 @@
+extends layouts/main-layout.pug
+
+block content
+    if !profileUser
+        h1 User not found
+    else
+        script.
+            var profileUserId = '#{profileUser._id}';
+            var selectedTab = '#{selectedTab}';
+
+        
+
+block scripts 
+    script(src="/js/profile.js")

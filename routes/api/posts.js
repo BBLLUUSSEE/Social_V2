@@ -15,7 +15,6 @@ router.get("/", async (req, res, next) => {
         var isReply = searchOgj.isReply == "true";
         searchOgj.replyTo = { $exists: isReply };
         delete searchOgj.isReply;
-        console.log(searchOgj)
     }
 
     var results = await getPosts(searchOgj);
@@ -77,10 +76,6 @@ router.put("/:id/like", async (req, res, next) => {
     var isLiked = req.session.user.likes && req.session.user.likes.includes(postId);
 
     var option = isLiked ? "$pull" : "$addToSet"; // Corretto "addToSet"
-
-    console.log("Is liked: " + isLiked);
-    console.log("Option: " + option);
-    console.log("UserId: " + userId);
 
     // insert user like
     req.session.user =  await User.findByIdAndUpdate(userId, { [option]: { likes: postId } }, { new: true })
