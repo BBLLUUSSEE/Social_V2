@@ -13,27 +13,46 @@ html(lang="en")
             var userLoggedIn = !{userLoggedInJs};
         .wrapper
             .row
-                nav.col-2
+                nav.col-3
                     a.blue(href="/")
-                        i.fa-solid.fa-hand-middle-finger 
+                        i.fa-brands.fa-twitter 
                     a(href="/")
                         i.fa-solid.fa-house
+                        span Home
                     a(href="/search")
                         i.fa-solid.fa-magnifying-glass
+                        span Explore
                     a(href="/notifications")
                         i.fa-regular.fa-bell
+                        span Notifications
                     a(href="/messages")
                         i.fa-regular.fa-envelope
+                        span Messages
                     a(href="/profile")
                         i.fa-solid.fa-user 
+                        span Profile
                     a(href="/logout")
-                        i.fa-solid.fa-sign-out-alt 
+                        i.fa-solid.fa-sign-out-alt  
                 .mainSectionContainer.col-10.col-md-8.col-lg-6
                     .titleContainer 
                         h1 #{pageTitle}
                     block content
-
-                .d-none.d-md-block.col-md-2.col-lg-4
+                .searchboxContainer.col-3
+                    .searchbox
+                        input.form-control(type="text", placeholder="Search...")
+                    .searchResultsContainer
+                        h2 Chi seguire
+                        ul.searchResultsList
+                            .searchResultItem
+                                img(src="/images/profilePic.jpg", alt="Nome Utente")
+                                span Nome Utente 1
+                            .searchResultItem
+                                img(src="/images/profilePic.jpg", alt="Nome Utente")
+                                span Nome Utente 2
+                            .searchResultItem
+                                img(src="/images/profilePic.jpg", alt="Nome Utente")
+                                span Nome Utente 3
+                            // Continua con altri utenti se necessario
         
         script(src="https://kit.fontawesome.com/170f42888f.js", crossorigin="anonymous")
         script(src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous")
